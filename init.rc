@@ -257,12 +257,20 @@ loglevel 3
     chown root audio /dev/snd/pcmC0D0c
     chown root audio /dev/snd/pcmC0D0p
     chown root audio /dev/snd/timer
-    setprop alsa.mixer.playback.master Front
-    setprop alsa.mixer.capture.master Capture
-    setprop alsa.mixer.playback.earpiece Master
-    setprop alsa.mixer.capture.earpiece Capture
-    setprop alsa.mixer.playback.headset Master
-    setprop alsa.mixer.playback.speaker Master
+
+    setprop alsa.mixer.playback.master "Output Volume - SPK/EAR"
+    setprop alsa.mixer.playback.earpiece "Output Volume - RCV"
+    setprop alsa.mixer.playback.speaker "Output Volume - SPK/EAR"
+    setprop alsa.mixer.playback.headset "Output Volume - SPK/EAR"
+    setprop alsa.mixer.playback.bluetooth.sco "Output Volume - SPK/EAR"
+    setprop alsa.mixer.playback.bluetooth.a2dp "Output Volume - SPK/EAR"
+
+    setprop alsa.mixer.capture.master "Capture"
+    setprop alsa.mixer.capture.earpiece "Capture"
+    setprop alsa.mixer.capture.speaker "Capture"
+    setprop alsa.mixer.capture.headset "Capture"
+    setprop alsa.mixer.capture.bluetooth.sco "Capture"
+    setprop alsa.mixer.capture.bluetooth.a2dp "Capture"
 
 on boot
 # basic network init
