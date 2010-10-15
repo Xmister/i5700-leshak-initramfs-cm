@@ -531,11 +531,11 @@ service bluetoothd /system/bin/bluetoothd -n /etc/blutooth/main.conf
     
 # +++++++++++++++++++++++++++++++++++++++++++
 ## Start BTLD -----------------------------------------
-#service btld /system/bin/logwrapper /system/bin/btld -hb 3000000 -hp /dev/s3c_serial1 -lpm 1
-#    user root
-#    group bluetooth net_bt_admin
-#    disabled
-#    oneshot
+service btld /system/bin/logwrapper /system/bin/btld -hb 3000000 -hp /dev/s3c_serial1 -lpm 1
+    user root
+    group bluetooth net_bt_admin
+    disabled
+    oneshot
 
   # Start DTUN OBEXD  -----------------------------------------
 #service obexd /system/bin/logwrapper /system/bin/obexd
