@@ -417,7 +417,7 @@ service console /system/bin/sh
 #
 # Thanks to DE-NISkA!
 #
-service akmd /system/bin/akmd
+service akmd /system/bin/akmd 0 0
     user compass
     group compass misc input
 
