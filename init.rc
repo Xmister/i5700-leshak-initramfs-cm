@@ -391,6 +391,12 @@ on boot
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
     chown bluetooth bluetooth /sys/class/rfkill/rfkill1/state 
 
+#
+# turn off BT radio, due fix first BT turn on
+# Criminal
+#
+    write /sys/class/rfkill/rfkill0/state 0
+
     chmod 6777 /system/bin/brcm_dutMode
 # +++++++++++++++++++++++++++++++++++++++++++
 
@@ -401,6 +407,8 @@ on boot
     setprop net.tcp.buffersize.umts    4094,87380,110208,4096,16384,110208
     setprop net.tcp.buffersize.edge    4093,26280,35040,4096,16384,35040
     setprop net.tcp.buffersize.gprs    4092,8760,11680,4096,8760,11680
+
+
 
     start sysinit
     on property:lk.filesystem.ready=1
