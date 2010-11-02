@@ -409,7 +409,8 @@ on boot
     setprop net.tcp.buffersize.edge    4093,26280,35040,4096,16384,35040
     setprop net.tcp.buffersize.gprs    4092,8760,11680,4096,8760,11680
 
-
+#include extra init.rc for ch33kybutt
+import /system/etc/init.local.rc
 
     start sysinit
     on property:lk.filesystem.ready=1
