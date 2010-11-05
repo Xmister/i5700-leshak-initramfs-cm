@@ -206,6 +206,9 @@ loglevel 3
     mkdir /data/app 0771 system system
     mkdir /data/property 0700 root root
 
+# for AppsOnSD keystore
+    mkdir /data/misc/systemkeys 700 system system
+
     # create log system 
     mkdir /data/log  0777 root root 
     chmod 0777 /data/log
