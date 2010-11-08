@@ -623,3 +623,9 @@ service dumpstate /system/bin/dumpstate -s
     socket dumpstate stream 0660 shell log
     disabled
     oneshot
+
+# compcache
+service compcache /system/bin/handle_compcache
+    user root
+    group root
+    oneshot

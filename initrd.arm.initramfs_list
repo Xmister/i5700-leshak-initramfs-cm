@@ -23,6 +23,7 @@ file /lib/modules/bnep.ko /usr/src/kernel/i5700-leshak-initramfs-froyo/lib/modul
 file /lib/modules/tun.ko /usr/src/kernel/i5700-leshak-initramfs-froyo/lib/modules/tun.ko 0644 0 0
 file /lib/modules/cifs.ko /usr/src/kernel/i5700-leshak-initramfs-froyo/lib/modules/cifs.ko 0644 0 0
 file /lib/modules/qt5480.ko /usr/src/kernel/i5700-leshak-initramfs-froyo/lib/modules/qt5480.ko 0644 0 0
+file /lib/modules/ramzswap.ko /usr/src/kernel/i5700-leshak-initramfs-froyo/lib/modules/ramzswap.ko 0644 0 0
 file /init.rc /usr/src/kernel/i5700-leshak-initramfs-froyo/init.rc 0644 0 0
 slink /etc /system/etc 0777 0 0
 dir /sys 0755 0 0
