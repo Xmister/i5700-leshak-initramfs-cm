@@ -12,8 +12,10 @@ loglevel 3
     export ANDROID_ROOT /system
     export ANDROID_ASSETS /system/app
     export ANDROID_DATA /data
+    export ANDROID_CACHE /cache
     export EXTERNAL_STORAGE /mnt/sdcard
     export ASEC_MOUNTPOINT /mnt/asec
+    export SD_EXT_DIRECTORY /sd-ext
     export BOOTCLASSPATH /system/framework/core.jar:/system/framework/ext.jar:/system/framework/framework.jar:/system/framework/android.policy.jar:/system/framework/services.jar
 
 # Backward compatibility
@@ -81,6 +83,8 @@ loglevel 3
     # Secure container public mount points.
     mkdir /mnt/asec  0700 root system
     mount tmpfs tmpfs /mnt/asec mode=0755,gid=1000
+
+    mkdir /sd-ext 0771 system system
 
     write /proc/sys/kernel/panic_on_oops 1
     write /proc/sys/kernel/hung_task_timeout_secs 0
@@ -158,7 +162,7 @@ loglevel 3
     chown system cache /cache
     chmod 0770 /cache
 
-	# We chown/chmod /efs again so because mount is run as root + defaults
+    # We chown/chmod /efs again so because mount is run as root + defaults
     # mount yaffs2 mtd@userdata /data nosuid nodev
     #mount yaffs2 /dev/bml10 /efs nosuid nodev
     mount rfs /dev/stl10 /efs nosuid nodev xattr,check=no
@@ -166,7 +170,7 @@ loglevel 3
     chmod 0770 /efs
 
     # This may have been created by the recovery system with odd permissions
-    chown system system /cache/recovery
+    chown system cache /cache/recovery
     chmod 0770 /cache/recovery
 
     #change permissions on vmallocinfo so we can grab it from bugreports
