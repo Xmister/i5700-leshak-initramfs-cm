@@ -136,6 +136,9 @@ loglevel 3
     chmod 0666 /dev/log/radio
     chmod 0666 /dev/log/main
 
+    #Dynamic Soundfix
+    exec /xbin/busybox sh -c "cat /system/xmister/soundfix > /proc/xmister/soundfix"
+
     # Create dump dir and collect dumps.
     # Do this before we mount cache so eventually we can use cache for
     # storing dumps on platforms which do not have a dedicated dump partition.
