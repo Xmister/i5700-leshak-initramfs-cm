@@ -138,6 +138,9 @@ loglevel 3
 
     #Dynamic Soundfix
     exec /xbin/busybox sh -c "cat /system/xmister/soundfix > /proc/xmister/soundfix"
+    
+    #Dynamic Undervolt
+    exec /xbin/busybox sh -c "cat /system/xmister/undervolt > /proc/xmister/undervolt"
 
     # Create dump dir and collect dumps.
     # Do this before we mount cache so eventually we can use cache for
