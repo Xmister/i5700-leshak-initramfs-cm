@@ -142,6 +142,9 @@ loglevel 3
     #Dynamic Undervolt
     exec /xbin/busybox sh -c "cat /system/xmister/undervolt > /proc/xmister/undervolt"
 
+    #Dynamic Audio Buffer
+    exec /xbin/busybox sh -c "cat /system/xmister/buffer > /proc/xmister/buffer"
+
     # Create dump dir and collect dumps.
     # Do this before we mount cache so eventually we can use cache for
     # storing dumps on platforms which do not have a dedicated dump partition.
