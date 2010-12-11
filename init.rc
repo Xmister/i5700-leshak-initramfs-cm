@@ -136,14 +136,23 @@ loglevel 3
     chmod 0666 /dev/log/radio
     chmod 0666 /dev/log/main
 
-    #Dynamic Soundfix
+    #Dynamic Soundfix (For compatibility to the old place)
     exec /xbin/busybox sh -c "cat /system/xmister/soundfix > /proc/xmister/soundfix"
-    
-    #Dynamic Undervolt
+
+    #Dynamic Undervolt (For compatibility to the old place)
     exec /xbin/busybox sh -c "cat /system/xmister/undervolt > /proc/xmister/undervolt"
 
-    #Dynamic Audio Buffer
+    #Dynamic Audio Buffer (For compatibility to the old place)
     exec /xbin/busybox sh -c "cat /system/xmister/buffer > /proc/xmister/buffer"
+
+    #Dynamic Soundfix
+    exec /xbin/busybox sh -c "cat /data/misc/xmister/soundfix > /proc/xmister/soundfix"
+
+    #Dynamic Undervolt
+    exec /xbin/busybox sh -c "cat /data/misc/xmister/undervolt > /proc/xmister/undervolt"
+
+    #Dynamic Audio Buffer
+    exec /xbin/busybox sh -c "cat /data/misc/xmister/buffer > /proc/xmister/buffer"
 
     # Create dump dir and collect dumps.
     # Do this before we mount cache so eventually we can use cache for
